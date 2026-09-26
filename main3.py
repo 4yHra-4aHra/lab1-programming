@@ -1,7 +1,6 @@
-def factorial(n):
-    if n <= 1:
-        return 1
-    return n * factorial(n - 1)
+print('\n')
+time = int(input('Введите время в секундах: '))
 
-num = 5
-print(factorial(num))
+h, m, s = time // 3600, (time % 3600) // 60, time % 60
+
+print(f'{h : 02d}:{m : 02d}:{s : 02d}')

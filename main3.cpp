@@ -1,18 +1,19 @@
-#include "iostream"
-
-auto factorial(int n) -> int {
-  if (n <= 1) return 1;
-  return n * factorial(n - 1);
-}
+#include <iomanip>
+#include <iostream>
 
 int main() {
-  auto number{5};
+  int time;
 
-  auto resf = factorial(number);
+  std::cout << "\n";
+  std::cout << "Введите время в секундах: ";
+  std::cin >> time;
 
-  std::cout << "\n" << std::endl;
-  std::cout << "Число:" << number << std::endl;
-  std::cout << "Факториал: " << resf << std::endl;
+  int h = time / 3600;
+  int m = (time % 3600) / 60;
+  int s = time % 60;
+
+  std::cout << std::setfill('0') << std::setw(2) << h << ":" << std::setw(2)
+            << m << ":" << std::setw(2) << s;
 
   return 0;
 }
