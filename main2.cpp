@@ -1,25 +1,30 @@
-#include "iostream"
-#include <string>
-
-auto square(int x) -> int{
-    return x * x;
-}
+#include <cmath>
+#include <iomanip>
+#include <iostream>
 
 int main() {
-    std::cout << "Hello World!!!" << std::endl;
-    
-    std::string name = "Ярославлев Игорь";
-    std::cout << "Студент: " << name << std::endl;
-    
-    std::cout << "Дата: 2026-09-10" << std::endl;
+  // Задаю переменным тип данных double
+  double a, b;
 
-    auto number{15};
+  // Перед тем, как запрашивать переменные у пользователя, ввожу пустую строку
+  // для удобства
+  std::cout << "\n";
+  std::cout << "Введите первое число: ";
+  std::cin >> a;
+  std::cout << "Введите второе число: ";
+  std::cin >> b;
 
-    auto result = square(number);
+  // Базовые арифметические операции
+  std::cout << "Сложение - " << a + b << "\n";
+  std::cout << "Вычитание - " << a - b << "\n";
+  std::cout << "Умножение - " << a * b << "\n";
+  std::cout << "Деление - " << a / b << "\n";
 
-    std::cout << "\n" << std::endl;
-    std::cout << "Число: " << number << std::endl;
-    std::cout << "Результат:" << result << std::endl;
-
-    return 0;
+  // Ввожу пустую строку чтобы разделить обычные преобразования чисел, от
+  // необычных.
+  std::cout << "\n";
+  std::cout << "Деление нацело - " << static_cast<int>(a) / static_cast<int>(b)
+            << "\n";
+  std::cout << "Остаток - " << std::fmod(a, b) << "\n";
+  std::cout << "Степень - " << std::pow(a, b) << "\n";
 }

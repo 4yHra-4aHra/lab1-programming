@@ -1,7 +1,10 @@
-def square(x):
-    return x * x
+print('\n')
+a, b = int(input('Введите 1 число: ')), int(input('Введите 2 число: '))
 
-number = int(input('Введите число: '))
-result = square(number)
-
-print(f'Квадрат: {result}')
+print('\n')
+print(f'сумма - {a + b}')
+print(f'разность - {a - b}')
+print(f'произведение - {a * b}')
+print(f'деление - {a / b}')
+print(f'деление нацело - {a // b}')
+print(f'степень - {a ** b}')
